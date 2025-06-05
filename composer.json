@@ -1,0 +1,32 @@
+{
+    "name": "ouodev/prerender",
+    "description": "laravel prerender.",
+    "type": "library",
+    "keywords": ["laravel", "prerender"],
+    "require": {
+        "php": ">=8.0",
+        "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/http": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "jenssegers/agent": "^2.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "koie",
+            "email": "koie@ouorange.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ouodev\\Prerender\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ouodev\\Prerender\\PrerenderServiceProvider"
+            ]
+        }
+    }
+}
