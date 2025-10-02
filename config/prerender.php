@@ -6,10 +6,11 @@ return [
 
     'prerender_url' => env('PRERENDER_URL', 'http://127.0.0.1'),
 
-    'timeout' => (int) env('PRERENDER_TIMEOUT', 5),
+    'timeout' => (int) env('PRERENDER_TIMEOUT', 30),
 
     'blacklist' => [
         'api/*',
+        '*/api/*',
         'admin/*',
         'uploads/*',
         'assets/*',

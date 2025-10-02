@@ -23,11 +23,11 @@ class PrerenderServiceProvider extends ServiceProvider
         if (app()->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/prerender.php' => config_path('prerender.php'),
-            ], 'prerender');
+            ], ['prerender', 'config']);
         }
 
         if (!app()->runningInConsole() && config('prerender.enabled')) {
-            app()->make(Kernel::class)->pushMiddleware(Prerender::class);
+            app()->make(Kernel::class)->pushMiddleware(PrerenderMiddleware::class);
         }
     }
 }
